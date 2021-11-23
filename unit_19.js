@@ -206,54 +206,77 @@ document.querySelector('.b-14').onclick = t14;
 
 // Task 15 ============================================
 /*  Дан блок .div-15. Добавьте на него событие move. При каждом движении мыши увеличивайте число внутри на 1. */
-
+let i = '';
 function t15() {
-
+    document.querySelector('.div-15').innerHTML = i;
+    i++;
+    console.log(i);
 }
 // ваше событие здесь!!!
+document.querySelector('.div-15').onmousemove = t15;
 
 
 // Task 16 ============================================
 /*  Дан блок .div-16. Добавьте на него событие move. При каждом движении мыши увеличивайте ширину блока на 1px. */
-
+w16 = 75;
 function t16() {
-
+    document.querySelector('.div-16').style.width = w16 + 1 + 'px';
+    w16++;
+    console.log(w16);
+    // w3 + 5px;
 }
 // ваше событие здесь!!!
+document.querySelector('.div-16').onmousemove = t16;
 
 // Task 17 ============================================
 /*  Дано две кнопки - b-17_on и b-17_off. Напишите фукнции t17On и t17Off которые включают и отключают событие move в задании 16. */
 
 function t17On() {
-
+    document.querySelector('.div-16').onmousemove = t16;
 }
 function t17Off() {
+    document.querySelector('.div-16').onmousemove = false;
 
 }
 // ваше событие здесь!!!
+document.querySelector('.b-17_on').onclick = t17On;
+document.querySelector('.b-17_off').onclick = t17Off;
 // ваше событие здесь!!!
 
 // Task 18 ============================================
 /*  Дан блок div-18. Напишите фукнцию t18 которая выводит в данный блок его ширину при событии onmouseenter. */
 
 function t18() {
-
+    a = document.querySelector('.div-18').offsetWidth;
+    console.log(a);
+    document.querySelector('.out-18').innerHTML = a;
 }
 // ваше событие здесь!!!
+document.querySelector('.div-18').onmouseenter = t18;
+
 
 // Task 19 ============================================
 /*  Дан блок div-19. Напишите фукнцию t19 которая выводит в данный блок его классы при событии onmouseout. */
 
 function t19() {
+    a = document.querySelector('.div-19').classList;
+    console.log(a);
+    document.querySelector('.out-19').innerHTML = a;
 
 }
 // ваше событие здесь!!!
+document.querySelector('.div-19').onmouseenter = t19;
 
 
 // Task 20 ============================================
 /*  Дан элемент progress. Напишите фукнцию t20 которая увеличивает его value на 1 при каждом событии mousemove внутри progress. */
+v = document.querySelector('progress').value;
 
 function t20() {
+    v++;
+    document.querySelector('progress').value = v;
 
+    console.log(v);
 }
 // ваше событие здесь!!!
+document.querySelector('progress').onmousemove = t20;
